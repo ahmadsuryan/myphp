@@ -26,7 +26,7 @@ class AddForeignKeyToPertanyaan extends Migration
     public function down()
     {
         Schema::table('pertanyaan', function (Blueprint $table) {
-            //
+            $table->dropForeign(['jawaban_tepat_id']);
         });
     }
 }
